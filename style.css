@@ -1,0 +1,93 @@
+:root {
+  --bg: #0D0D0D;
+  --fg: #FFFFFF;
+  --magenta: #FF2EF7;
+  --cyan: #00F5FF;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Locomotive controls scroll */
+}
+
+.hero {
+  position: relative;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.neon {
+  border: 1px solid var(--cyan);
+  color: var(--fg);
+  background: linear-gradient(90deg, rgba(255,46,247,0.2), rgba(0,245,255,0.2));
+}
+
+.btn.neon:hover {
+  box-shadow: 0 0 8px var(--magenta), 0 0 8px var(--cyan);
+}
+
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section.dim {
+  background: #1A1A1A;
+}
+
+.noise-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before, .glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.glitch-text::before { color: var(--magenta); transform: translate(-1px, 0); }
+.glitch-text::after  { color: var(--cyan);    transform: translate(1px, 0); }
+
+.glitch-active::before, .glitch-active::after {
+  animation: glitch-jitter 0.3s ease-in-out;
+}
+
+@keyframes glitch-jitter {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-2px, -1px); }
+  40% { transform: translate(2px, 1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
