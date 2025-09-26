@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G8 Docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="docs">
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo"><img src="assets/g8-logo.svg" alt="G8 logo" /></div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container docs-wrap">
+    <aside class="sidebar">
+      <a href="#overview">Overview</a>
+      <a href="#world">Why World Chain</a>
+      <a href="#flow">Launch Flow</a>
+      <a href="#fees">Fees & LP</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+    </aside>
+    <article class="content">
+      <h1 id="overview">G8 Docs</h1>
+      <p class="lead">Rep‑gated, auto‑graduating launchpad on World Chain. Users mint on a bonding curve (in WLD). When the threshold hits, the same tx creates a Uniswap v3 pool, seeds liquidity, and burns the LP position.</p>
+
+      <h2 id="world">Why World Chain</h2>
+      <ul>
+        <li><b>Verified users:</b> World ID = real humans by default.</li>
+        <li><b>Wallets on day 1:</b> Privy in‑app wallets mean normies onboard without friction.</li>
+        <li><b>World App Store:</b> Users get instant access to apps. Perfect for new traders.</li>
+      </ul>
+
+      <h2 id="flow">Launch Flow</h2>
+      <ol>
+        <li><b>Verify:</b> Pass World ID → Privy wallet created.</li>
+        <li><b>Mint:</b> Users buy with WLD on a bonding curve → tokens minted instantly.</li>
+        <li><b>Graduate:</b> Crossing threshold auto‑creates Uniswap v3 pool (WLD/TOKEN), seeds LP (85% WLD + 12–15% supply), burns LP NFT, pays rakes (10% platform, 5–7% creator vesting).</li>
+        <li><b>Trade:</b> Price continuity from curve. Pool is live; LP is permanently locked.</li>
+      </ol>
+
+      <h2 id="fees">Fees & LP</h2>
+      <ul>
+        <li><b>Platform rake:</b> 10% of raised WLD (immediate to treasury).</li>
+        <li><b>Creator rake:</b> 5–7% of raised WLD (streamed/vested).</li>
+        <li><b>Liquidity:</b> 85% of WLD + reserved token bucket → LP.</li>
+        <li><b>DEX:</b> Uniswap v3, 0.3% tier, tight initial range around final price.</li>
+      </ul>
+
+      <h2 id="security">Security</h2>
+      <ul>
+        <li>LP position NFT is burned (or black‑holed) → no liquidity rugs.</li>
+        <li>Atomic pool init + add liquidity in the same tx → no snipeable gap.</li>
+        <li>Phase machine: Funding → Graduating → Live. Double‑grad protected.</li>
+      </ul>
+
+      <h2 id="faq">FAQ</h2>
+      <p><b>Do users get tokens immediately?</b> Yes. Tokens mint to their Privy wallet on each buy.</p>
+      <p><b>Can tokens be moved pre‑graduation?</b> Yes, but there’s no public pool until graduation.</p>
+      <p><b>Why burn LP?</b> To guarantee a price floor and remove rug risk.</p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot-inner">
+      <span class="muted mono">© G8</span>
+    </div>
+  </footer>
+</body>
+</html>
